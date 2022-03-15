@@ -18,10 +18,11 @@ include_once('../vendor/autoload.php');
 
 use Ebedy\DecoupageAdministratifBenin\DecoupageAdministratif;
 
-DecoupageAdministratif::Departement();
-DecoupageAdministratif::Commune();
-DecoupageAdministratif::Arrondissement();
-DecoupageAdministratif::Quartier();
+DecoupageAdministratif::getAll();
+DecoupageAdministratif::getDepartement();
+DecoupageAdministratif::getCommune();
+DecoupageAdministratif::getArrondissement();
+DecoupageAdministratif::getQuartier();
 ```
 ### Recherche
 ```php
