@@ -40,7 +40,7 @@ DecoupageAdministratif::findBy(array $criteria);
 
 ## Crédits
 
-- [@ebedy](https://github.com/ebedy/decoupage-administratif-benin)
+- [@ebedy](https://github.com/ebedy)
 
 ## Licence
 Données : Licence Ouverte
