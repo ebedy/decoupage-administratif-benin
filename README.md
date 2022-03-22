@@ -10,39 +10,36 @@ composer require ebedy/decoupage-administratif-benin
 
 ## Utilisation
 
-### Liste par type de localite (departement, commune, arrondissement et quartier)
+### Liste par type de localite (departements, communes, arrondissements et quartiers)
 ```php
 <?php
+
+declare(strict_types=1);
 
 include_once('../vendor/autoload.php');
 
 use Ebedy\DecoupageAdministratifBenin\DecoupageAdministratif;
 
-DecoupageAdministratif::getAll();
-DecoupageAdministratif::getDepartement();
-DecoupageAdministratif::getCommune();
-DecoupageAdministratif::getArrondissement();
-DecoupageAdministratif::getQuartier();
+/** @var array<array-key,Localite> $all */
+$all = DecoupageAdministratif::getAll();
+$departements = DecoupageAdministratif::getBy()->type('departement');
+
+/** @var array<array-key,Localite> $communes */
+$communes = DecoupageAdministratif::getBy()->type('commune');
+
+/** @var array<array-key,Localite> $arrondissements */
+$arrondissements = DecoupageAdministratif::getBy()->type('arrondissement');
+
+/** @var array<array-key,Localite> $quartiers */
+$quartiers = DecoupageAdministratif::getBy()->type('quartier');
 ```
 ### Recherche
-```php
-<?php
-
-include_once('../vendor/autoload.php');
-
-use Ebedy\DecoupageAdministratifBenin\DecoupageAdministratif;
-
-DecoupageAdministratif::find(string $code);
-DecoupageAdministratif::find(string $code)->withChild();
-DecoupageAdministratif::findOneBy(array $criteria);
-DecoupageAdministratif::findBy(array $criteria);
-
-```
 
 ## Crédits
 
-- [@ebedy](https://github.com/ebedy)
+- [@ebedy](https://github.com/ebedy/decoupage-administratif-benin)
 
 ## Licence
 Données : Licence Ouverte
 Code : MIT
+
