@@ -1,0 +1,11 @@
+parameters:
+  level: 9
+  paths:
+    - public
+    - src
+    - tests
+  excludePaths:
+      analyseAndScan:
+          - ecs.php
+  checkMissingIterableValueType: false
+  checkGenericClassInNonGenericObjectType: false

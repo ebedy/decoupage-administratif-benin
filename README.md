@@ -10,7 +10,7 @@ composer require ebedy/decoupage-administratif-benin
 
 ## Utilisation
 
-### Liste par type de localite (departements, communes, arrondissements et quartiers)
+### Liste par type de localite (departements, communes, arrondissements et quartier)
 ```php
 <?php
 
@@ -34,6 +34,16 @@ $arrondissements = DecoupageAdministratif::getBy()->type('arrondissement');
 $quartiers = DecoupageAdministratif::getBy()->type('quartier');
 ```
 ### Recherche
+```php
+<?php
+
+include_once('../vendor/autoload.php');
+
+use Ebedy\DecoupageAdministratifBenin\DecoupageAdministratif;
+
+$localite = DecoupageAdministratif::getOneBy()->type(string $type)->code(string $code);
+
+```
 
 ## Crédits
 
@@ -42,4 +52,3 @@ $quartiers = DecoupageAdministratif::getBy()->type('quartier');
 ## Licence
 Données : Licence Ouverte
 Code : MIT
-

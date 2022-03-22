@@ -1,0 +1,61 @@
+{
+  "name": "ebedy/decoupage-administratif-benin",
+  "description": "Wrapper PHP pour l'accès aux données concernant le découpage administratif du BENIN",
+  "type": "library",
+  "require-dev": {
+    "bmitch/churn-php": "^1.5",
+    "symfony/var-dumper": "^6.0",
+    "phpstan/phpstan": "^1.4",
+    "phpstan/phpstan-phpunit": "^1.0",
+    "phpunit/phpunit": "^9.5",
+    "phpmd/phpmd": "@stable",
+    "icanhazstring/composer-unused": "^0.8.1",
+    "phpstan/phpstan-strict-rules": "^1.1",
+    "phpstan/extension-installer": "^1.1",
+    "ekino/phpstan-banned-code": "^1.0",
+    "symplify/easy-coding-standard": "^10.0",
+    "symplify/phpstan-extensions": "^10.0",
+    "symplify/phpstan-rules": "^10.0",
+    "roave/security-advisories": "dev-latest",
+    "sebastian/phpcpd": "^6.0",
+    "thecodingmachine/phpstan-strict-rules": "^1.0",
+    "phpstan/phpdoc-parser": "^1.2"
+  },
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Ebedy\\DecoupageAdministratifBenin\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Ebedy\\DecoupageAdministratifBenin\\Tests\\": "tests/"
+    }
+  },
+  "authors": [
+    {
+      "name": "BEDY Komlan Edym",
+      "email": "bedyedym@gmail.com",
+      "role": "author"
+    }
+  ],
+  "readme": "README.md",
+  "minimum-stability": "stable",
+  "prefer-stable": true,
+  "require": {
+    "php": ">=8.0",
+    "loophp/collection": "^6.0",
+    "symfony/finder": "^6.0"
+  },
+  "config": {
+    "allow-plugins": {
+      "phpstan/extension-installer": true,
+      "composer-unused/composer-unused-plugin": true
+    },
+    "optimize-autoloader": true,
+    "preferred-install": {
+      "*": "dist"
+    },
+    "sort-packages": true
+  }
+}
